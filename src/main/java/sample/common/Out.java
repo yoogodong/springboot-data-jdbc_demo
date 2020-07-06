@@ -12,7 +12,9 @@ import java.util.HashMap;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Value
 public class Out<T> {
-    public static Out OK = new Out(0, "success", new HashMap());
+    private static final HashMap EMPTY = new HashMap();
+    public static Out OK = new Out(0, "success", EMPTY);
+
     private int code;
     private String message;
     private T data;
@@ -23,5 +25,9 @@ public class Out<T> {
 
     public static Out with(int code, String message, Object data) {
         return new Out(code, message, data);
+    }
+
+    public static Out with(int code, String message) {
+        return new Out(code, message, EMPTY);
     }
 }

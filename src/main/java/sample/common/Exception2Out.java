@@ -1,5 +1,6 @@
 package sample.common;
 
+import org.springframework.data.relational.core.conversion.DbActionExecutionException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,8 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class Exception2Out {
 
+    @ExceptionHandler(DbActionExecutionException.class)
+    public Out dbAction(DbActionExecutionException e) {
+        return Out.with(1, e.getMessage());
+    }
+
     @ExceptionHandler(Throwable.class)
-    public Out handle(Throwable e) {
+    public Out last(Throwable e) {
+        System.out.println(e.getClass().getName());
         return Out.with(1, e.getMessage(), e);
     }
+
 }

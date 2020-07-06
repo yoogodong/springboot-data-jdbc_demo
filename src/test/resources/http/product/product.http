@@ -1,0 +1,11 @@
+### 新添加商品
+PUT http://{{host}}:{{port}}/{{context}}/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "mate30",
+  "quantity": 100
+}
+
+###

@@ -10,10 +10,17 @@ import sample.common.Out;
 @Slf4j
 public class ProductController {
 
-    @PutMapping()
-    public Out add(@RequestBody ProductIN productIN) {
-        log.info("添加商品{}", productIN);
+    private final ProductService service;
 
+    public ProductController(ProductService service) {
+        this.service = service;
+    }
+
+    @PutMapping()
+    public Out add(@RequestBody Product product) {
+        log.info("添加商品{}", product);
+
+        service.addProduct(product);
 
         return Out.OK;
     }

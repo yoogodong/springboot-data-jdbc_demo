@@ -1,9 +1,13 @@
 ### 新添加商品
 POST http://{{host}}:{{port}}/{{context}}/accounts
 Content-Type: application/json
+Accept: application/json
 
 {
   "description": "工资卡"
 }
 
 ###
+GET http://{{host}}:{{port}}/{{context}}/accounts
+Accept: application/json
+

@@ -1,9 +1,7 @@
 package sample.account.port;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import sample.account.Account;
 import sample.account.AccountService;
 import sample.common.Out;
 
@@ -24,4 +22,10 @@ public class AccountController {
         return Out.successOf(new AccountOpenOut(id));
     }
 
+
+    @GetMapping
+    public Out listAll() {
+        Iterable<Account> accounts = service.listAll();
+        return Out.successOf(accounts);
+    }
 }

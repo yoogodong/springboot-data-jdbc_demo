@@ -16,4 +16,7 @@ public class AccountService {
     }
 
 
+    public Iterable<Account> listAll() {
+        return repository.findAll();
+    }
 }

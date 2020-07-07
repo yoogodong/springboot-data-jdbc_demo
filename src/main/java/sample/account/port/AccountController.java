@@ -38,4 +38,10 @@ public class AccountController {
         return Out.successOf(accs);
     }
 
+    @GetMapping("/batch-append-desc")
+    public Out batchAppend(@RequestBody BatchAppendIn in) {
+        int updated = service.batchAppendDesc(in.getDescription());
+        return Out.of(0, "更新了" + updated);
+    }
+
 }

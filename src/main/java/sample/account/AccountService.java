@@ -27,4 +27,8 @@ public class AccountService {
         return repository.findAccountByDescription(desc);
     }
 
+    public int batchAppendDesc(String append) {
+        return repository.batchUpdateDesc(append);
+    }
+
 }

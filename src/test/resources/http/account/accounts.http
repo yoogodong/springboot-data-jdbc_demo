@@ -19,3 +19,13 @@ Accept: application/json
 {
   "description": "工资卡"
 }
+
+
+###
+GET http://{{host}}:{{port}}/{{context}}/accounts/batch-append-desc
+Accept: application/json
+Content-Type: application/json
+
+{
+  "description": "-幸运账户"
+}

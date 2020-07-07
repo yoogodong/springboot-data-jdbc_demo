@@ -1,15 +1,17 @@
 package sample.account;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 
 import java.time.LocalDateTime;
 
+
+@AllArgsConstructor(onConstructor_ = {@PersistenceConstructor})
 @Data
 public class Account {
-    @CreatedDate
     private final LocalDateTime openTime;
     @Id
     private Long id;

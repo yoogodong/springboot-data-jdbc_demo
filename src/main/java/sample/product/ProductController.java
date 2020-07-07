@@ -3,10 +3,12 @@ package sample.product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import sample.common.Out;
 
-@RestController("/product")
+@RestController
+@RequestMapping("/products")
 @Slf4j
 public class ProductController {
 
@@ -16,7 +18,7 @@ public class ProductController {
         this.service = service;
     }
 
-    @PutMapping()
+    @PutMapping
     public Out add(@RequestBody Product product) {
         log.info("添加商品{}", product);
 

@@ -19,15 +19,15 @@ public class Out<T> {
     private String message;
     private T data;
 
-    public static Out okWithData(Object data) {
+    public static Out successOf(Object data) {
         return new Out(0, "success", data);
     }
 
-    public static Out with(int code, String message, Object data) {
+    public static Out of(int code, String message, Object data) {
         return new Out(code, message, data);
     }
 
-    public static Out with(int code, String message) {
+    public static Out of(int code, String message) {
         return new Out(code, message, EMPTY);
     }
 }

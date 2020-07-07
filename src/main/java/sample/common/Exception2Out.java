@@ -17,7 +17,7 @@ public class Exception2Out {
     @ExceptionHandler(Throwable.class)
     public Out last(Throwable e) {
         System.out.println(e.getClass().getName());
-        return Out.of(1, e.getMessage(), e);
+        return Out.of(1, e.getMessage(), e.getClass().getName());
     }
 
 }

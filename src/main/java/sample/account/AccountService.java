@@ -3,6 +3,8 @@ package sample.account;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class AccountService {
@@ -19,4 +21,10 @@ public class AccountService {
     public Iterable<Account> listAll() {
         return repository.findAll();
     }
+
+
+    public List<Account> findAccountByDescription(String desc) {
+        return repository.findAccountByDescription(desc);
+    }
+
 }

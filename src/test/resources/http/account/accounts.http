@@ -11,3 +11,11 @@ Accept: application/json
 GET http://{{host}}:{{port}}/{{context}}/accounts
 Accept: application/json
 
+###
+PUT http://{{host}}:{{port}}/{{context}}/accounts/find-by-desc
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "工资卡"
+}

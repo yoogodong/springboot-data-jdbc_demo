@@ -5,6 +5,8 @@ import sample.account.Account;
 import sample.account.AccountService;
 import sample.common.Out;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
@@ -28,4 +30,12 @@ public class AccountController {
         Iterable<Account> accounts = service.listAll();
         return Out.successOf(accounts);
     }
+
+
+    @PutMapping("/find-by-desc")
+    public Out findByDescription(@RequestBody FindByDescriptionIn in) {
+        List<Account> accs = service.findAccountByDescription(in.getDescription());
+        return Out.successOf(accs);
+    }
+
 }

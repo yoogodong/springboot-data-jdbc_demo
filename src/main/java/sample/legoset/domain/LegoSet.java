@@ -36,7 +36,7 @@ public class LegoSet {
     /**
      * 可以搭建的模型，这个属性不能 Set, 为了能让 spring 设置其值，有两种选择，一是包含在构造方法参数中，二是提供 with 方法--spring 会自动找这个方法
      */
-    @MappedCollection(keyColumn = "NAME")
+    @MappedCollection(keyColumn = "NAME", idColumn = "LEGO_SET")
     private final Map<String, Model> models;
 
     /**

@@ -9,7 +9,7 @@
 
 
 ## 导读
-- account 包
+- account 
   - 一个简单实体，来表现 CrudRepository 的简便之处
   - @Query 自定义查询
   - @Modifying + @Query 更新语句 
@@ -23,4 +23,8 @@
    5. 自定义转化器
    6. 实体事件
    7. 查询结果转化成自定义类型
+- common 公共包
+  - 公共的保存实体的方法 insert 
+  - 统一的应答类型
+  - 统一的 Controller 异常处理 
    

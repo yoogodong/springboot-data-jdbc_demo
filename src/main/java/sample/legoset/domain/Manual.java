@@ -18,7 +18,7 @@ public class Manual {
     private Long id;
     private String author, text;
 
-    Manual(String text, String author) {
+    public Manual(String text, String author) {
         this.id = null;
         this.author = author;
         this.text = text;

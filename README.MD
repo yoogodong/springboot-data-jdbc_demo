@@ -9,8 +9,7 @@
 
 
 ## 导读
-- account 包， 一个最简单示例
+- account 包
   - 一个简单实体，来表现 CrudRepository 的简便之处
-- product, 例外和聚合
+- product, 使用底层接口
   - 在主键有值时如何 insert 
-  - 聚合和关系操作

@@ -4,6 +4,8 @@ import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import sample.legoset.domain.LegoSet;
+import sample.legoset.domain.ModelReport;
 
 import java.util.List;
 

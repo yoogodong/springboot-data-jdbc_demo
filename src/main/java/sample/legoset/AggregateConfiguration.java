@@ -8,6 +8,8 @@ import org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration
 import org.springframework.data.relational.core.conversion.AggregateChange;
 import org.springframework.data.relational.core.mapping.event.BeforeSaveCallback;
 import org.springframework.lang.Nullable;
+import sample.legoset.domain.LegoSet;
+import sample.legoset.domain.Manual;
 
 import java.sql.Clob;
 import java.sql.SQLException;

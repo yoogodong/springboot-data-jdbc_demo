@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = App.class)
 @Transactional
-        //每个测试方法后，事务不提交
+//每个测试方法执行后，事务不提交
 class ProductRepositoryTest {
 
     @Autowired
